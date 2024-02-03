@@ -18,3 +18,9 @@ if rep.ok:
             urls.append([title,"https://news.hqu.edu.cn/"+href])
 for url in urls:
     print(url)
+
+lis = open("./list.txt" , "w+" , encoding = "utf-8")
+for url in urls:
+    for s in url:
+        lis.writelines(s)
+lis.close()
