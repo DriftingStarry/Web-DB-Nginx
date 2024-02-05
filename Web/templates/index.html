@@ -8,6 +8,18 @@
 
 <body>
     <h1>新闻数据</h1>
+    <table>
+        <tr>
+            <th>title</th>
+            <th>url</th>
+        </tr>
+        {% for i in u %}
+        <tr>
+          <td>{{ i[0] }}</td>
+          <td>{{ i[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
     <h2>TBC...</h2>
 </body>
 
