@@ -8,7 +8,7 @@ def get():
     cur.execute(sql)
     conn.commit()
     r = cur.fetchall()
-    return r
+    return r[-1:-11:-1]
 app = Flask(__name__)
 
 @app.route('/')
