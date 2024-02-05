@@ -2,6 +2,7 @@
 import requests as rq
 from bs4 import BeautifulSoup
 import pymysql
+import time
 
 def reptile(web):
     rep = rq.get(web)
@@ -27,11 +28,25 @@ def dbwrite(host,port,url):
     cur.execute(sql)
     conn.commit()
 
-web = "https://news.hqu.edu.cn/hdyw.htm"
-host = 'localhost'
-port = 3306
-urls = reptile(web)
-preurls = urls
-for url in urls:
-    print(url[0],url[1])
-    dbwrite(host,port,url)
+global preurls
+preurls = []
+
+def main():
+    web = "https://news.hqu.edu.cn/hdyw.htm"
+    host = 'localhost'
+    port = 3306
+    urls = reptile(web)
+    for url in urls:
+        if url not in preurls:
+            print(url[0],url[1])
+            dbwrite(host,port,url)
+            preurls.append(url)
+        else:
+            print('Wirte None')
+    while len(preurls) >= 11:
+        preurls.pop(0)
+        print(preurls)
+
+while True:
+    main()
+    time.sleep(300)
