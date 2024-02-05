@@ -2,5 +2,6 @@ CREATE DATABASE hddata;
 USE hddata;
 CREATE TABLE news(
 title TEXT,
-turl TEXT
+turl TEXT,
+id INT AUTO_INCREMENT PRIMARY KEY
 );

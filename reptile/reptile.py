@@ -23,7 +23,7 @@ def reptile(web):
 def dbwrite(host,port,url):
     conn = pymysql.connect(host=host,port=port,user='PyReptile',password='Py_114514',database='hddata')
     cur = conn.cursor()
-    sql = "insert into news (title,turl) values (%s,%s)"%(url[0],url[1])
+    sql = "insert into news (title, turl) values ('%s','%s')"%(url[0],url[1])
     cur.execute(sql)
     conn.commit()
 
@@ -31,6 +31,7 @@ web = "https://news.hqu.edu.cn/hdyw.htm"
 host = 'localhost'
 port = 3306
 urls = reptile(web)
+preurls = urls
 for url in urls:
     print(url[0],url[1])
     dbwrite(host,port,url)
