@@ -1,7 +1,7 @@
 CREATE DATABASE hddata;
 USE hddata;
 CREATE TABLE news(
-title VARCHAR NOT NULL,
-turl VARCHAR NOT NULL,
+title TEXT,
+turl TEXT,
 id INT PRIMARY KEY
 );
