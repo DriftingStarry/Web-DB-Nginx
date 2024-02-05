@@ -11,4 +11,6 @@ IDENTIFIED BY 'Flask_1919810';
 GRANT ALL
 ON *.*
 TO 'ops'@'%'
-IDENTIFIED BY 'ops'
+IDENTIFIED BY 'ops';
+
+flush privileges;

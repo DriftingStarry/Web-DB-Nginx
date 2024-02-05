@@ -15,7 +15,7 @@ def reptile(web):
             for l in lis:
                 title = l.h3.text
                 href = l.a['href']
-                urls.append([title,"https://news.hqu.edu.cn/"+href])
+                urls.append([title,'https://news.hqu.edu.cn/'+href])
     for url in urls:
         print(url)
     return urls
@@ -32,4 +32,5 @@ host = 'localhost'
 port = 3306
 urls = reptile(web)
 for url in urls:
+    print(url[0],url[1])
     dbwrite(host,port,url)
