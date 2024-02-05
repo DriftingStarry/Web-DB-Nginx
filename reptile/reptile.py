@@ -33,7 +33,7 @@ preurls = []
 
 def main():
     web = "https://news.hqu.edu.cn/hdyw.htm"
-    host = 'localhost'
+    host = 'mydb'
     port = 3306
     urls = reptile(web)
     for url in urls:
