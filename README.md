@@ -4,6 +4,8 @@
   - [ ] 数据表增加 id 主键
   - [ ] 爬虫抓取htm前数字
 - [ ] Nginx反代
+  - [x] html页面
+  - [ ] 外部静态资源
 - [ ] Rclone
 - [ ] gitlabCI
 - [ ] crontab定时任务
