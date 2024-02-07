@@ -1,6 +1,6 @@
 list.txt
 Web/templates/test.html
-reptile/reptile local.py
 reptile/writedbtest.py
 Web/gettest.py
+reptile/reptile local.py
 Web/main local.py
