@@ -1,3 +1,8 @@
+# Intro
+Sends 23级作业  
+使用 `docker-compose`部署`nginx` `mariadb` `python爬虫` `flask站点`   
+效果可访问 https://121.199.32.74/  
+
 # To do list
 - [x] Web实时更新数据
 - [x] 爬虫不重复爬取
