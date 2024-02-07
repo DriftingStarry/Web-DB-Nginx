@@ -9,7 +9,6 @@ def getid(href):
     id = ''
     while '0' <= href[i] <= '9':
         id = href[i] + id
-        print(id)
         i -= 1
     return int(id)
 
@@ -26,8 +25,6 @@ def reptile(web):
                 title = l.h3.text
                 href = l.a['href']
                 urls.append([title,'https://news.hqu.edu.cn/'+href,getid(href)])
-    for url in urls:
-        print(url)
     return urls
 
 def dbwrite(host,port,url):
