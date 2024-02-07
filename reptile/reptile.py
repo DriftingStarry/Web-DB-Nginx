@@ -28,11 +28,21 @@ def reptile(web):
     return urls
 
 def dbwrite(host,port,url):
-    conn = pymysql.connect(host=host,port=port,user='PyReptile',password='Py_114514',database='hddata')
-    cur = conn.cursor()
-    sql = "insert into news (title, turl, id) values ('%s','%s',%d)"%(url[0],url[1],url[2])
-    cur.execute(sql)
-    conn.commit()
+    try:
+        print('connecting database...')
+        conn = pymysql.connect(host=host,port=port,user='PyReptile',password='Py_114514',database='hddata')
+        print('connection established')
+        cur = conn.cursor()
+        sql = "insert into news (title, turl, id) values ('%s','%s',%d)"%(url[0],url[1],url[2])
+        cur.execute(sql)
+        conn.commit()
+        print('write done')
+    except:
+        print("connection failed, reconnecting in 5s")
+        for i in range(5,0,-1):
+            print(i)
+            time.sleep(1)
+        dbwrite(host,port,url)
 
 def main():
     web = "https://news.hqu.edu.cn/hdyw.htm"
@@ -41,7 +51,7 @@ def main():
     urls = reptile(web)
     for url in urls:
         try:
-            print(url[0],url[1],url[2])
+            print("news < ",url[0],url[1],url[2])
             dbwrite(host,port,url)
         except:
             print('err')
