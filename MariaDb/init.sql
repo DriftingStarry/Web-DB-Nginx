@@ -20,5 +20,5 @@ USE hddata;
 CREATE TABLE news(
 title TEXT,
 turl TEXT,
-id INT AUTO_INCREMENT PRIMARY KEY
+id INT PRIMARY KEY
 );
