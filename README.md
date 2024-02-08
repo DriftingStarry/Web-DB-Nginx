@@ -11,6 +11,6 @@ Sends 23级作业
 - [ ] Nginx反代
   - [x] html页面
   - [ ] 外部静态资源
-- [ ] Rclone
+- [x] Rclone
 - [ ] gitlabCI
 - [ ] crontab定时任务
