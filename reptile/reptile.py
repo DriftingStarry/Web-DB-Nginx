@@ -33,18 +33,22 @@ def dbwrite(host,port,url):
         conn = pymysql.connect(host=host,port=port,user='PyReptile',password='Py_114514',database='hddata')
         print('connection established')
         cur = conn.cursor()
-        sql = "insert into news (title, turl, id) values ('%s','%s',%d)"%(url[0],url[1],url[2])
-        cur.execute(sql)
-        conn.commit()
+        try:
+            sql = "insert into news (title, turl, id) values ('%s','%s',%d)"%(url[0],url[1],url[2])
+            cur.execute(sql)
+            conn.commit()
+            print('Successfully Writed')
+        except:
+            print('Write Error')
         cur.close()
         conn.close()
-        print('write done')
+        print('connection closed')
     except:
         print("connection failed, reconnecting in 5s")
         for i in range(5,0,-1):
             print(i)
             time.sleep(1)
-        dbwrite(host,port,url)
+        dbwrite(host,port,url)  
 
 def main():
     web = "https://news.hqu.edu.cn/hdyw.htm"
