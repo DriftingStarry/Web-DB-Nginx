@@ -1,0 +1,6 @@
+USE hddata;
+SELECT * FROM news 
+INTO OUTFILE 'news.csv' 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"' 
+LINES TERMINATED BY '\n';
