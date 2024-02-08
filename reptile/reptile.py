@@ -36,6 +36,7 @@ def dbwrite(host,port,url):
         sql = "insert into news (title, turl, id) values ('%s','%s',%d)"%(url[0],url[1],url[2])
         cur.execute(sql)
         conn.commit()
+        cur.close()
         conn.close()
         print('write done')
     except:

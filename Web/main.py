@@ -8,6 +8,7 @@ def get():
     cur.execute(sql)
     conn.commit()
     r = cur.fetchall()
+    cur.close()
     conn.close()
     return r[-1:-11:-1]
 app = Flask(__name__)
