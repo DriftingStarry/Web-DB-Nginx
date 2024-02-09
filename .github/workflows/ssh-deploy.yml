@@ -27,3 +27,4 @@ jobs:
           mv compose lastver
           mv tmp compose
           mkdir tmp
+          docker compose -f ./compose/docker-compose.yml up -d
