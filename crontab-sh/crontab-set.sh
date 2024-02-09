@@ -1,1 +1,0 @@
-*/5 * * * * /home/dfsr/compose/crontab-sh/run.sh
