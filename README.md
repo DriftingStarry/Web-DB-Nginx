@@ -13,4 +13,7 @@ Sends 23级作业
   - [ ] 外部静态资源
 - [x] Rclone
 - [ ] gitlabCI
+- [ ] GitHub Actions
+  - [ ] 自动测试代码
+  - [x] 自动部署
 - [x] crontab定时任务
