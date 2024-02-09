@@ -14,3 +14,4 @@ Sends 23级作业
 - [x] Rclone
 - [ ] gitlabCI
 - [x] crontab定时任务
+- [ ] DB 导出脚本修复
