@@ -22,7 +22,7 @@ jobs:
         last_ssh: |
           echo $LASTSSH 
           cd /home/dfsr/
-          docker compose -f ./compose/docker-compose down --rmi all
+          docker compose -f ./compose/docker-compose.yml down --rmi all
           cp -r ./compose/MariaDb/data ./tmp/MariaDb/data
           mv compose lastver
           mv tmp compose
