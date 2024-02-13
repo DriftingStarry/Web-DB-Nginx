@@ -17,9 +17,9 @@ jobs:
           run: pip install pytest
         - name: test reptile
           run: |
-            pip install -r /reptile/requirements.txt
+            pip install -r ./reptile/requirements.txt
             pytest /reptile/reptile.py
         - name: test flask
           run: |
-            pip install -r /Web/requirements.txt
-            pytest /Web/main.py
+            pip install -r ./Web/requirements.txt
+            pytest ./Web/main.py
