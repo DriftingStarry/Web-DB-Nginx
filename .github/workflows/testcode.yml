@@ -1,0 +1,25 @@
+name: testcode
+on:
+    push:
+        branches: [ "alpha" ]
+    pull_request:
+        branches: [ "alpha" ]
+jobs:
+    build:
+        runs-on: ubuntu-lates
+        steps:
+        - uses: actions/checkout@v3
+        - name: setup python
+          uses: actions/setup-python@v3
+          with:
+            python-version: '3.8'
+        - name: setup pytest
+          run: pip install pytest
+        - name: test reptile
+          run: |
+            pip install -r /reptile/requirements.txt
+            pytest /reptile/reptile.py
+        - name: test flask
+          run: |
+            pip install -r /Web/requirements.txt
+            pytest /Web/main.py
