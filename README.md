@@ -21,5 +21,5 @@ crontab -e
 ```
 键入
 ```crontab
-*/5 * * * * [path]
+*/5 * * * * [path/run.sh]
 ```
