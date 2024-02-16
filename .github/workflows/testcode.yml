@@ -1,0 +1,15 @@
+name: testcode
+on:
+    push:
+        branches: [ "alpha" ]
+    pull_request:
+        branches: [ "alpha" ]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v3
+        - name: composetest
+          run: |
+            docker compose up -d
+
