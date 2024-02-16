@@ -1,9 +1,21 @@
 name: ssh-deploy
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - 'main'
+    paths-ignore:
+      - '.github/**'
+      - '开发文档/**'
+      - '.gitignore'
+      - 'README.md'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main'
+    paths-ignore:
+      - '.github/**'
+      - '开发文档/**'
+      - '.gitignore'
+      - 'README.md'
 jobs:
   build:
     runs-on: ubuntu-latest
