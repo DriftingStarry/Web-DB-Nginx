@@ -1,6 +1,6 @@
 cd /home/dfsr/
-docker compose -f ./compose/docker-compose.yml down --rmi all
 echo yourpasswd | cp -r ./compose/MariaDb/data ./tmp/MariaDb/data
+docker compose -f ./compose/docker-compose.yml down --rmi all
 if [ -d lastver ]; then
     echo yourpasswd | sudo -S rm -r lastver
 fi

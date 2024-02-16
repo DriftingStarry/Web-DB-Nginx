@@ -1,3 +1,3 @@
-cd /home/dfsr/compose/crontab-sh
+cd /home/dfsr/crontab-sh
 ./output.sh
 ./update.sh

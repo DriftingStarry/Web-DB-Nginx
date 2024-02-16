@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../MariaDb/data/hddata/
+cd ../compose/MariaDb/data/hddata/
 if [ -f news.csv ]; then
     echo yourpasswd | sudo -S rm news.csv
 fi
